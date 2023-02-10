@@ -1,0 +1,29 @@
+{
+  "name": "gspot-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GS-Spot/Backend.git"
+  },
+  "author": "GS-POT",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GS-Spot/Backend/issues"
+  },
+  "homepage": "https://github.com/GS-Spot/Backend#readme",
+  "dependencies": {
+    "aws-sdk": "^2.1312.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "nodemon": "^2.0.20"
+  }
+}
