@@ -1,6 +1,10 @@
-import { Response, verifyToken } from "../utils";
+const { Response, verifyToken } = require("../utils");
 
-export async function isAuthenticated(req, res, next) {
+async function allowAll(req, res, next) {
+  next();
+}
+
+async function isAuthenticated(req, res, next) {
   try {
     const token = req.headers.authorization;
     if (!token) {
@@ -17,7 +21,7 @@ export async function isAuthenticated(req, res, next) {
   }
 }
 
-export async function isFaculty(req, res, next) {
+async function isFaculty(req, res, next) {
   try {
     const token = req.headers.authorization;
     if (!token) {
@@ -41,7 +45,7 @@ export async function isFaculty(req, res, next) {
   }
 }
 
-export async function isPanelHead(req, res, next) {
+async function isPanelHead(req, res, next) {
   try {
     const token = req.headers.authorization;
     if (!token) {
@@ -58,7 +62,7 @@ export async function isPanelHead(req, res, next) {
   }
 }
 
-export async function isAdmin(req, res, next) {
+async function isAdmin(req, res, next) {
   try {
     const token = req.headers.authorization;
     if (!token) {
@@ -75,7 +79,7 @@ export async function isAdmin(req, res, next) {
   }
 }
 
-export async function isStudent(req, res, next) {
+async function isStudent(req, res, next) {
   try {
     const token = req.headers.authorization;
     if (!token) {
