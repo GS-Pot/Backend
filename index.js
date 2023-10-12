@@ -43,3 +43,5 @@ app.post("/", async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server up on ${PORT}`);
 });
+
+module.exports = app;
